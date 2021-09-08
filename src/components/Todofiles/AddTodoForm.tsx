@@ -16,11 +16,15 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) =>  {
   
   const createTodo = () => {
     const todoRef = firebase.database().ref("/tasks/myday");
+    const todosRef = firebase.database().ref("/tasks/important");
+
     const todo = {
     text,
-      complete: false,
+    id: Math.floor(Math.random()* 10000),
+    complete: false,
     };
     todoRef.push(todo);
+    todosRef.push(todo)
   }
   return (
     <>

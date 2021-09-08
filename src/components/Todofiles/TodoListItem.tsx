@@ -13,8 +13,20 @@ export const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
     const todoRef = firebase.database().ref('/tasks/myday');
     todoRef.update({
       complete: !todo.complete,
+      
     });
-    
+
+    const todosRef = firebase.database().ref('tasks/important')
+    todosRef.update({
+      complete: !todo.complete
+    })
+
+
+    // const addToLocalStorage = (todos) => {
+    //     localStorage.setItem('todos', JSON.stringify(todos))
+    //     renderTodos(todos)
+    // }
+
   return (
     <li>
       <label
