@@ -1,0 +1,27 @@
+.App {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: sans-serif;
+    background: #0275d8;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 26px;
+    box-sizing: border-box;
+             
+}
+.container {
+    display: flex;
+    text-align: center;
+}

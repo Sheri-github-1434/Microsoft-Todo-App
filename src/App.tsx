@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
+import {MyDay} from './pages/Overview';
+import {Important}  from './pages/Important';
+import {Planned}  from './pages/Planned';
+import {AssignedToYou} from "./pages/AssignedToYou"
+import {Tasks} from "./pages/Tasks"
+import {NewList} from "./pages/Tasks"
+import Sidebar from './components/Todofiles/Sidebar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  return (   
+  <div>
+              <h1 style={{textAlign: 'center', fontSize: "100px", color: 'red' }}>Our Todos App</h1>
+   <Router>
+         <Sidebar />
+              <Switch>
+                <Route path="/tasks/myday" component={MyDay} exact></Route>
+                <Route path="/tasks/important" component={Important} exact></Route>
+                <Route path="/tasks/planned" component={Planned} exact></Route>
+                <Route path="/tasks/assigned_to_me" component={AssignedToYou} exact></Route>
+                <Route path="/tasks" component={Tasks} exact></Route>
+                <Route  component={NewList}></Route>
+            </Switch>
+         </Router> 
+      </div>
   );
 }
 
