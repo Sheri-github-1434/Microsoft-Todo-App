@@ -23,12 +23,6 @@ export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
     }, []);
   });
 
-
-  localStorage.setItem('firebase:host:todo-app-clone-81ff3-default-rtdb.firebaseio.com', '"s-usc1c-nss-283.firebaseio.com"')
-
-  localStorage.getItem('firebase:host:todo-app-clone-81ff3-default-rtdb.firebaseio.com')
-
-
   return (
     <>
     <ul style={{
