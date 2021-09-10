@@ -1,11 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   color: whitesmoke;
+    
   line-height: 2;
 
 }
@@ -30,8 +31,9 @@ body {
   width: 46%;
 }
 
+
 .text input[type=text] {
-  margin-left: 260px;
+  margin-left: 256px;
   width: 80%;
   height: 50px;
   border: none;
@@ -41,7 +43,6 @@ body {
   justify-content: center;
   border-bottom: 1px solid grey;
 }
-
 
 .text input[type=text]:focus {
   outline: none;
@@ -98,14 +99,23 @@ body {
   width: 47%; 
 }
 
+
 .newList {
   align-items: "center";
   font-family: sans-serif;
   display: flex;
   justify-content: center;
-  transition: 2ms;
   align-items: center;
   font-size: 3rem;
   color: #000000;
   height: 90vh;
+}
+
+a, a:hover , a:focus, a:active {
+  text-decoration: none;
+  color: #ee82ee;
+} 
+
+button {
+  margin-left: 25px;
 }
