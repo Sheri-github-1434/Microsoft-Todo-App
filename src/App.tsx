@@ -1,11 +1,11 @@
 import {BrowserRouter as Router} from "react-router-dom";
 import {Route, Switch} from "react-router-dom";
-import {MyDay} from './pages/TasksCategories/Overview';
-import {Important}  from './pages/TasksCategories/Important';
-import {Planned}  from './pages/TasksCategories/Planned';
-import {AssignedToYou} from "./pages/TasksCategories/AssignedToYou"
-import {Tasks} from "./pages/TasksCategories/Tasks"
-import {NewList} from "./pages/TasksCategories/Tasks"
+import {MyDay} from './pages/Overview';
+import {Important}  from './pages/Important';
+import {Planned}  from './pages/Planned';
+import {AssignedToYou} from "./pages/AssignedToYou"
+import {Tasks} from "./pages/Tasks"
+import {NewList} from "./pages/Tasks"
 import Sidebar from './components/Todofiles/Sidebar';
 
 const App = () => {
