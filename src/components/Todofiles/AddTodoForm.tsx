@@ -15,7 +15,8 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) =>  {
   // }
   
   const createTodo = () => {
-    const todoRef = firebase.database().ref("/tasks/myday");
+    const todoRef = firebase.database().ref("/tasks/myday"); 
+  
     const todosRef = firebase.database().ref("/tasks/important");
 
     const todo = {
@@ -23,8 +24,9 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) =>  {
     id: Math.floor(Math.random()* 10000),
     complete: false,
     };
+
     todoRef.push(todo);
-    todosRef.push(todo)
+    todosRef.push(todo);
   }
   return (
     <>
@@ -32,10 +34,13 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) =>  {
       <input style={{display: "flex", marginTop: "20px", paddingLeft: '10px'}}
         type="text"
         placeholder="Add a task"
+        name="text"
         value={text}
         onChange={e => {
           setText(e.target.value);
+          
         }}
+       
       />
       <button style={{border: "none", cursor: "pointer", marginLeft: "260px", textAlign: "center", marginTop: "5px", borderTop: "2px solid red", borderBottom: "2px solid red"}}
         onClick={e => {
@@ -43,6 +48,7 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) =>  {
           addTodo(text);
           setText("");
           createTodo()
+          
         }}
       >
         Add Todo

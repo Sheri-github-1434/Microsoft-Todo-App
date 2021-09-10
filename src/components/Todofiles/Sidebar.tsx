@@ -65,10 +65,10 @@ const Sidebar: FC = () => {
         </div>
         <div>Search</div>
         <div>
-                <span style={{fontSize: "20px"}}>< BsGear style={{color: "#fff", marginLeft: "10px"}} /> </span>
+                <span style={{fontSize: "20px"}}>< BsGear style={{color: "#fff", marginLeft: "10px"}}  /> </span>
                 <span style={{fontSize: "20px"}}><AiOutlineQuestion style={{color: "white", marginLeft: "10px"}} /></span>
                 <span style={{fontSize: "20px"}}>< HiSpeakerphone style={{color: "#fff", marginLeft: "10px"}} /></span>
-                <span style={{marginLeft:"15px", padding: "4px", border: "1px solid #fff", borderRadius: "50%" ,fontSize: "18px"}}>AJ</span>
+                <span style={{marginLeft:"15px", padding: "4px", border: "1px solid #fff", borderRadius: "60%" ,fontSize: "18px"}}>AJ</span>
            </div>
            </header>
              <div className="container">

@@ -12,14 +12,6 @@ export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
   const [todoList, setTodoList] = useState(null);
 
   useEffect(() => {
-  //   fetch("https://todo-app-clone-81ff3-default-rtdb.firebaseio.com/application.json", 
-  //   {method: "GET"})
-  //   .then((res) => {
-  //     console.log(res.json)
-  //   })
-  //  .catch((err) => {
-  //    console.log(err)
-  //  })
     const todoRef = firebase.database().ref('Todo');
     todoRef.on('value', (snapshot) => {
       const todos = snapshot.val();
@@ -30,6 +22,12 @@ export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
         setTodoList(todoList);
     }, []);
   });
+
+
+  localStorage.setItem('firebase:host:todo-app-clone-81ff3-default-rtdb.firebaseio.com', '"s-usc1c-nss-283.firebaseio.com"')
+
+  localStorage.getItem('firebase:host:todo-app-clone-81ff3-default-rtdb.firebaseio.com')
+
 
   return (
     <>
