@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react"
 import { TodoList } from "../components/Todofiles/TodoList";
 import { AddTodoForm } from "../components/Todofiles/AddTodoForm";
-import Button from "@material-ui/core/Button"
+
 
 export const Tasks: FC = () => {
 
@@ -45,10 +45,8 @@ export const Tasks: FC = () => {
    export const NewList: FC = () => {
      return (
        <div>
-     <div className="newList">Welcome To Our Todos App
-     <Button variant="contained" color="default" style={{backgroundColor: "#0275d8", marginLeft: "50px", display: "block"}}> 
-       <a href="/tasks/myday">Get Started</a>
-      </Button>
+     <div className="newList">Welcome To Our Todos App 
+     <span><button><a href="/tasks/myday">Get Started</a></button></span>
       </div>
       
      </div>
