@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect, useState} from 'react';
 import { TodoListItem } from './TodoListItem';
+// import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import firebase from "../../firebase"
 
 interface Props {
@@ -9,7 +10,9 @@ interface Props {
 
 export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
 
-  const [todoList, setTodoList] = useState(null);
+
+  const [todoList, setTodoList] = useState(null)
+  
 
   useEffect(() => {
     const todoRef = firebase.database().ref('Todo');
@@ -25,21 +28,19 @@ export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
 
   return (
     <>
+    
     <ul style={{
      fontFamily: "sans-serif",
-    //  borderRadius: '8px',
      listStyle: "none",
      marginLeft: "256px",
      marginTop: '40px',
      color: "black",
      width: "80%",
-    //  border: "none",
-    //  flexDirection: "row",
     }}>
-      {todos.map(todo => (    
- <TodoListItem key={Math.floor(Math.random()* 1000)} todo={todo} toggleTodo={toggleTodo} />
     
-      ))}
+      {todos.map(todo => ( 
+ <TodoListItem key={Math.floor(Math.random()* 1000)} todo={todo} toggleTodo={toggleTodo} />
+      ))}  
     </ul>
     </>
   )
