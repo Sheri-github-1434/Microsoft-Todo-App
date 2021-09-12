@@ -14,7 +14,7 @@ export const SidebarData: SidebarItem[] = [
     {
         title: 'My Day',
         path: '/tasks/myday',
-        icon:<BiSun style={{color: "grey", fontSize: "20px"}} />
+        icon:<BiSun  style={{color: "grey", fontSize: "20px"}} />
     },
      {
         title: 'Important',
