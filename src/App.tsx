@@ -1,6 +1,6 @@
 import {BrowserRouter as Router} from "react-router-dom";
 import {Route, Switch} from "react-router-dom";
-import {MyDay} from './pages/Overview';
+import {MyDay} from './pages/Myday';
 import {Important}  from './pages/Important';
 import {Planned}  from './pages/Planned';
 import {AssignedToYou} from "./pages/AssignedToYou"
