@@ -11,7 +11,15 @@ interface Props {
 export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
 
 
-  const [todoList, setTodoList] = useState(null)
+  const todoLists = () => {
+    const storage = (localStorage.getItem("todos"))
+    if(storage) {
+      return JSON.parse(localStorage.getItem("todos") || "{}")
+    } 
+  }
+
+
+  const [todoList, setTodoList] = useState(todoLists())
   
 
   useEffect(() => {
@@ -25,6 +33,12 @@ export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
         setTodoList(todoList);
     }, []);
   });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+      localStorage.getItem("todos")
+  }, [todos])
+
 
   return (
     <>
